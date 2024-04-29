@@ -1,0 +1,4 @@
+# config/packages/debug.yaml
+
+# Définition de la configuration de débogage
+debug:

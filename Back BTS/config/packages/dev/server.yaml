@@ -1,0 +1,6 @@
+# config/packages/dev/server.yaml
+
+# Configuration spécifique du serveur de développement
+parameters:
+    server_host: '127.0.0.1'
+    server_port: 8080

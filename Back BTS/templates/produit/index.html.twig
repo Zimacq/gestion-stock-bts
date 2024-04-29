@@ -1,0 +1,61 @@
+{# templates/produit/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Produits{% endblock %}
+
+{% block body %}
+    <style>
+        /* Custom CSS for the product list */
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .table {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            padding-top: 20px;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <h1 class="mb-3">Liste des Produits</h1>
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Référence</th>
+                    <th>Quantité en stock</th>
+                    <th>Taille disponible</th>
+                    <th>Couleur disponible</th>
+                    <th>Catégorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in produits %}
+                    <tr>
+                        <td>{{ produit.id_produit }}</td>
+                        <td>{{ produit.nom_produit }}</td>
+                        <td>{{ produit.prix_vente_unitaire }} €</td>
+                        <td>{{ produit.reference }}</td>
+                        <td>{{ produit.quantite_stock }}</td>
+                        <td>{{ produit.taille_disponible }}</td>
+                        <td>{{ produit.couleur_disponible }}</td>
+                        <td>{{ produit.categorie.nom_categorie }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

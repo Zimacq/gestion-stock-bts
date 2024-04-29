@@ -1,0 +1,29 @@
+# config/routes.yaml
+
+produit_index:
+    path: /
+    controller: App\Controller\ProduitController::index
+
+api_doc:
+    path: /api/doc
+    controller: App\Controller\ApiDocController::index
+
+api_categories:
+    path: /api/categorie
+    controller: App\Controller\StockApiController::getCategories
+    methods: [GET]
+
+api_commandes:
+    path: /api/commande
+    controller: App\Controller\StockApiController::getCommandes
+    methods: [GET]
+
+api_fournisseurs:
+    path: /api/fournisseur
+    controller: App\Controller\StockApiController::getFournisseurs
+    methods: [GET]
+
+api_produits:
+    path: /api/produit
+    controller: App\Controller\StockApiController::getProduits
+    methods: [GET]

@@ -1,0 +1,19 @@
+api_categories_list:
+    path: /api/categories
+    controller: App\Controller\ApiStockController::getCategories
+    methods: GET
+
+api_commandes_list:
+    path: /api/commandes
+    controller: App\Controller\ApiStockController::getCommandes
+    methods: GET
+
+api_fournisseurs_list:
+    path: /api/fournisseurs
+    controller: App\Controller\ApiStockController::getFournisseurs
+    methods: GET
+
+api_produits_list:
+    path: /api/produits
+    controller: App\Controller\ApiStockController::getProduits
+    methods: GET
